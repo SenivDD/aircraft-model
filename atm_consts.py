@@ -1,8 +1,7 @@
-c_MolarMass = 28.964420
-c_AvogadroNumber = 602.257 * (10 ** 24)
-c_UniversalGasConst = 8314.32
-c_SpecificGasConst = 287.05287
-c_AdiabaticExp = 1.4
-c_ConventionalRadius = 6356767
-c_AccelerationOfGravity = 9.80665
-c_KelvinTemp = 273.15
+MOLAR_MASS = 28.964420
+UNIVRSAL_GAS_CONST = 8314.32
+SPECIFIC_GAS_CONST = 287.05287
+ADIABATIC_EXP = 1.4
+CONVENTIONAL_RADIUS = 6356767
+ACCELERATION_OF_GRAVITY = 9.80665
+KELVIN_TEMP = 273.15
