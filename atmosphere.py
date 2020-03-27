@@ -1,36 +1,44 @@
 from atm_consts import *
 
-class ATMOSPHERE:
+class Atmosphere:
     """
     This class will contain model of the atmosphere according to GOST - 4401-81
     """
-    def get_AccelOfGravity(self, Height):
+    def get_accel_of_gravity(self, height):
         """
         Function for calculating the acceleration of gravity as a function of height.
         """
-        AccelOfGravity = c_AccelerationOfGravity * ((c_ConventionalRadius / (c_ConventionalRadius + Height)) ** 2)
-        return AccelOfGravity
+        accel_of_gravity = ACCELERATION_OF_GRAVITY * ((CONVENTIONAL_RADIUS / (CONVENTIONAL_RADIUS + height)) ** 2)
+        return accel_of_gravity
 
+    def set_geopotentional_height(self, height):
+        """
+        Function for converting geometric height to geopotential height.
+        """
+        geopotential_height = (CONVENTIONAL_RADIUS * height) / (CONVENTIONAL_RADIUS + height)
+        
+        return geopotential_height
 
-    def get_Temperature(self, Height):
+    
+    def get_temperature(self, height):
         """
         Function for calculating temperature as a fucntion of height.
         """
         return 
 
-    def get_Density(self, Height):
+    def get_density(self, height):
         """
         Function for calculating Density as a function of height.
         """
         return 
     
-    def get_Pressure(self, Height):
+    def get_pressure(self, height):
         """
         Function for calculating pressure as a function of height.
         """
         return 
 
-    def get_SoundSpeed(self, Height):
+    def get_sound_speed(self, height):
         """
         Function for calculating sound speed as a function of height.
         """
