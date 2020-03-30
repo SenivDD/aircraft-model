@@ -16,7 +16,7 @@ class Atmosphere:
         self.T = self.T_base +T_GRAD*(self.H_geo-self.H_base)
         self.pressure = self.pressure_base*10**(-ACCELERATION_OF_GRAVITY/(T_GRAD * SPECIFIC_GAS_CONST)*log10(self.T/self.T_base))
         self.Density = self.pressure * MOLAR_MASS/(self.T * UNIVRSAL_GAS_CONST) 
-        sef.V_sound = 20.046796*self.T**0.5
+        self.V_sound = 20.046796*self.T**0.5
 
     def get_accel_of_gravity(self, height):
         """
