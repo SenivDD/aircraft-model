@@ -22,7 +22,7 @@ class Atmosphere:
         """
         Function for calculating the acceleration of gravity as a function of height.
         """
-        return accel_of_gravity 
+        return self.accel_of_gravity 
 
     def get_temperature(self):
         """
