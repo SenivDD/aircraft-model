@@ -1,5 +1,13 @@
-from atm_consts import *
 from math import log10
+MOLAR_MASS = 28.964420
+UNIVRSAL_GAS_CONST = 8314.32
+SPECIFIC_GAS_CONST = 287.05287
+ADIABATIC_EXP = 1.4
+CONVENTIONAL_RADIUS = 6356767
+ACCELERATION_OF_GRAVITY = 9.80665
+KELVIN_TEMP = 273.15
+T_GRAD = -0.0065
+
 class Atmosphere:
     """
     This class will contain model of the atmosphere according to GOST - 4401-81
