@@ -4,7 +4,7 @@ class Atmosphere:
     """
     This class will contain model of the atmosphere according to GOST - 4401-81
     """
-    def __init__(self,T_base=288.15,H_base=0,pressure_base=101325):
+    def __init__(self,T_base=288.15,H_base=0.0,pressure_base=101325.0):
         self.T_base = T_base
         self.H_base = H_base
         self.pressure_base = pressure_base
