@@ -1,5 +1,13 @@
-from atm_consts import *
 from math import log10
+MOLAR_MASS = 28.964420
+UNIVRSAL_GAS_CONST = 8314.32
+SPECIFIC_GAS_CONST = 287.05287
+ADIABATIC_EXP = 1.4
+CONVENTIONAL_RADIUS = 6356767
+ACCELERATION_OF_GRAVITY = 9.80665
+KELVIN_TEMP = 273.15
+T_GRAD = -0.0065
+
 class Atmosphere:
     """
     This class will contain model of the atmosphere according to GOST - 4401-81
@@ -16,7 +24,7 @@ class Atmosphere:
         self.T = self.T_base +T_GRAD*(self.H_geo-self.H_base)
         self.pressure = self.pressure_base*10**(-ACCELERATION_OF_GRAVITY/(T_GRAD * SPECIFIC_GAS_CONST)*log10(self.T/self.T_base))
         self.Density = self.pressure * MOLAR_MASS/(self.T * UNIVRSAL_GAS_CONST) 
-        sef.V_sound = 20.046796*self.T**0.5
+        self.V_sound = 20.046796*self.T**0.5
 
     def get_accel_of_gravity(self):
         """
