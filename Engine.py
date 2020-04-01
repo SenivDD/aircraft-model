@@ -9,6 +9,8 @@ V_aircraft = 50
 Air_density = 	atm.get_density()
 "Режим 1/0"
 mode = 1
+mode_arr = [0 1]
+omega_arr [1000 2800]
 "Коэф-т J"
 J = [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.76, 0.77, 0.78, 0.79, 0.8, 0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9, 0.91, 0.92, 0.93, 0.94]
 "Коэф-т Ct(J)"
@@ -23,13 +25,7 @@ class Engine(object):
         self.propeller_R = propeller_R
 
     def Get_mode(self,mode):
-        if (mode == 0 or mode == 1):
-            if (mode == 1):
-                return 2*pi*2800/60
-            else:
-                return 2*pi*1000/60
-        else:
-            return  2*pi*2800/60
+            return  2*pi*(np.interp(mode,mode_arr,omega_arr,omega_arr[0],omega_arr[-1]))/60
 
     def get_tractive_power(self):
         omega = self.Get_mode(mode)
