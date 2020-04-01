@@ -31,7 +31,7 @@ class Engine(object):
         omega = self.Get_mode(mode)
         J_new = pi * V_aircraft / (omega * self.propeller_R)
         Ct_new = self.Get_Ct(J_new)
-        return (2/pi)**2*Air_density*(omega*self.propeller_R)**2*Ct_new
+        return (2/pi)**2*Air_density*(omega*self.propeller_R**2)**2*Ct_new
     "функция вычисления текущего значения Ct"
     def Get_Ct(self,J_new):
         return np.interp(J_new,J,Ct,Ct[0],Ct[-1])
