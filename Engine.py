@@ -29,7 +29,7 @@ class Engine(object):
             else:
                 return 2*pi*1000/60
         else:
-            return "Mode must be 0 or 1" #full shit
+            return  2*pi*2800/60
 
     def get_tractive_power(self):
         omega = self.Get_mode(mode)
